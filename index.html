@@ -216,6 +216,7 @@
       const body = document.body;
       const resumeFallback =
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='800'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='38' font-family='Arial'%3Eresume.jpg placeholder%3C/text%3E%3C/svg%3E";
+      let resumeFallbackApplied = false;
 
       function applyTheme(theme) {
         const isNight = theme === "night";
@@ -234,12 +235,18 @@
       });
 
       resumeImage.addEventListener("error", () => {
-        if (!resumeImage.src.startsWith("data:image/svg+xml")) {
+        if (!resumeFallbackApplied) {
+          resumeFallbackApplied = true;
           resumeImage.src = resumeFallback;
         }
       });
-
-      resumeImage.src = resumeImage.dataset.src;
+      const resumePath = (resumeImage.dataset.src || "").trim();
+      const isSafeResumePath =
+        /^([./]|[a-zA-Z0-9_-])[a-zA-Z0-9_./-]*\.(jpg|jpeg|png|webp)$/i.test(resumePath) &&
+        !resumePath.toLowerCase().startsWith("javascript:");
+      if (isSafeResumePath) {
+        resumeImage.src = resumePath;
+      }
     </script>
   </body>
 </html>
