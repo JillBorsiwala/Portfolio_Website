@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  fs.readFile(filePath, (err, data) => {
+  fs.stat(filePath, (err, stats) => {
     if (err) {
       if (err.code === "ENOENT") {
         res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
@@ -51,17 +51,31 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (!stats.isFile()) {
+      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+      res.end("Not Found");
+      return;
+    }
+
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || "application/octet-stream";
     res.writeHead(200, {
       "Content-Type": contentType,
-      "Content-Length": data.length,
+      "Content-Length": stats.size,
     });
     if (req.method === "HEAD") {
       res.end();
       return;
     }
-    res.end(data);
+
+    const stream = fs.createReadStream(filePath);
+    stream.on("error", () => {
+      if (!res.headersSent) {
+        res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+      }
+      res.end("Internal Server Error");
+    });
+    stream.pipe(res);
   });
 });
 
