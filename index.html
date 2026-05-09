@@ -241,9 +241,7 @@
         }
       });
       const resumePath = (resumeImage.dataset.src || "").trim();
-      const isSafeResumePath =
-        /^([./]|[a-zA-Z0-9_-])[a-zA-Z0-9_./-]*\.(jpg|jpeg|png|webp)$/i.test(resumePath) &&
-        !resumePath.toLowerCase().startsWith("javascript:");
+      const isSafeResumePath = resumePath === "resume.jpg";
       if (isSafeResumePath) {
         resumeImage.src = resumePath;
       }
