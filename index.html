@@ -234,8 +234,10 @@
       });
 
       resumeImage.addEventListener("error", () => {
-        resumeImage.src = resumeFallback;
-      }, { once: true });
+        if (!resumeImage.src.startsWith("data:image/svg+xml")) {
+          resumeImage.src = resumeFallback;
+        }
+      });
 
       resumeImage.src = resumeImage.dataset.src;
     </script>
