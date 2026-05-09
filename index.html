@@ -145,7 +145,7 @@
     </div>
 
     <header class="mx-auto flex w-full max-w-6xl items-center justify-between p-6">
-      <h1 class="text-xl font-semibold">Your Name Portfolio</h1>
+      <h1 class="text-xl font-semibold">[Your Name]'s Portfolio</h1>
       <button
         id="themeToggle"
         type="button"
@@ -208,7 +208,7 @@
 
     <script>
       // Theme toggle state persisted in local storage
-      const STORAGE_KEY = "portfolio-theme";
+      const THEME_STORAGE_KEY = "portfolio-theme";
       const themeToggle = document.getElementById("themeToggle");
       const resumeImage = document.getElementById("resumeImage");
       const body = document.body;
@@ -220,10 +220,10 @@
         body.classList.toggle("theme-night", isNight);
         body.classList.toggle("theme-light", !isNight);
         themeToggle.textContent = isNight ? "Switch to Light Mode" : "Switch to Night Mode";
-        localStorage.setItem(STORAGE_KEY, theme);
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
       }
 
-      const storedTheme = localStorage.getItem(STORAGE_KEY);
+      const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
       applyTheme(storedTheme === "light" ? "light" : "night");
 
       themeToggle.addEventListener("click", () => {
