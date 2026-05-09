@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Theme backgrounds */
+      body {
+        transition: background 0.5s ease;
+      }
+
+      .theme-night {
+        background: linear-gradient(160deg, #020617 0%, #0f172a 50%, #1e1b4b 100%);
+        color: #e2e8f0;
+      }
+
+      .theme-light {
+        background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 45%, #dbeafe 100%);
+        color: #0f172a;
+      }
+
+      .sky-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .stars,
+      .sun-glow {
+        position: absolute;
+        inset: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .theme-night .stars {
+        opacity: 1;
+      }
+
+      .theme-light .stars {
+        opacity: 0;
+      }
+
+      /* Starfield in night mode */
+      .stars::before,
+      .stars::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        border-radius: 999px;
+        background: #f8fafc;
+        box-shadow:
+          4vw 8vh #f8fafc,
+          12vw 22vh #f8fafc,
+          21vw 14vh #cbd5e1,
+          29vw 31vh #f8fafc,
+          38vw 11vh #f8fafc,
+          45vw 25vh #cbd5e1,
+          57vw 18vh #f8fafc,
+          66vw 29vh #f8fafc,
+          74vw 12vh #cbd5e1,
+          82vw 26vh #f8fafc,
+          91vw 16vh #f8fafc,
+          16vw 40vh #cbd5e1,
+          34vw 47vh #f8fafc,
+          53vw 41vh #f8fafc,
+          72vw 46vh #cbd5e1,
+          88vw 39vh #f8fafc,
+          8vw 61vh #f8fafc,
+          27vw 71vh #cbd5e1,
+          49vw 64vh #f8fafc,
+          68vw 76vh #f8fafc,
+          86vw 69vh #cbd5e1;
+      }
+
+      .stars::before {
+        animation: twinkle 3.4s ease-in-out infinite;
+      }
+
+      .stars::after {
+        animation: twinkle 5.2s ease-in-out infinite reverse;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.3;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.9;
+          transform: scale(1.25);
+        }
+      }
+
+      .theme-light .sun-glow {
+        opacity: 1;
+      }
+
+      .theme-night .sun-glow {
+        opacity: 0;
+      }
+
+      /* Sunshine glow in light mode */
+      .sun-glow::before {
+        content: "";
+        position: absolute;
+        top: -9rem;
+        right: -9rem;
+        width: 26rem;
+        height: 26rem;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(254, 240, 138, 0.9) 0%, rgba(253, 224, 71, 0.5) 35%, rgba(253, 224, 71, 0.08) 70%, rgba(253, 224, 71, 0) 100%);
+      }
+
+      /* Infinite certificate track animation */
+      .carousel-track {
+        display: flex;
+        width: max-content;
+        animation: scroll 24s linear infinite;
+      }
+
+      .carousel:hover .carousel-track {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body class="theme-night min-h-screen antialiased">
+    <div class="sky-layer" aria-hidden="true">
+      <div class="stars"></div>
+      <div class="sun-glow"></div>
+    </div>
+
+    <header class="mx-auto flex w-full max-w-6xl items-center justify-between p-6">
+      <h1 class="text-xl font-semibold">[Your Name]'s Portfolio</h1>
+      <button
+        id="themeToggle"
+        type="button"
+        class="rounded-full border border-slate-300/50 bg-slate-900/20 px-4 py-2 text-sm font-medium backdrop-blur-sm transition hover:scale-105"
+        aria-label="Switch between night and light mode"
+      >
+        Switch to Light Mode
+      </button>
+    </header>
+
+    <main class="mx-auto flex w-full max-w-6xl flex-col gap-12 p-6 pb-12">
+      <section class="grid items-center gap-8 md:grid-cols-2" aria-labelledby="hero-heading">
+        <article class="space-y-5">
+          <p class="inline-block rounded-full border border-slate-400/40 px-3 py-1 text-xs uppercase tracking-widest">
+            Portfolio Placeholder Tagline
+          </p>
+          <h2 id="hero-heading" class="text-4xl font-bold leading-tight md:text-5xl">Hi, I'm [Your Name], Full-Stack Developer</h2>
+          <p class="max-w-xl text-base leading-relaxed md:text-lg">
+            This is placeholder intro text. Replace it with your professional summary, your core strengths, and the kind of impact you deliver in real-world projects.
+          </p>
+          <button
+            type="button"
+            aria-label="Placeholder button for primary portfolio action"
+            class="inline-flex rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400"
+          >
+            Placeholder Call-to-Action
+          </button>
+        </article>
+
+        <aside class="mx-auto w-full max-w-md">
+          <div class="overflow-hidden rounded-2xl border border-slate-300/40 bg-white/20 shadow-lg backdrop-blur-sm">
+            <img
+              id="resumeImage"
+              data-src="resume.jpg"
+              alt="Placeholder resume preview for [Your Name], Full-Stack Developer"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </aside>
+      </section>
+
+      <section aria-labelledby="certificates-heading" class="relative left-1/2 w-screen -translate-x-1/2 space-y-4">
+        <div class="mx-auto w-full max-w-6xl px-6">
+          <h3 id="certificates-heading" class="text-2xl font-semibold">Certificates Carousel</h3>
+        </div>
+        <div class="carousel w-full overflow-hidden border-y border-slate-300/40 bg-slate-950/10 p-4">
+          <div class="carousel-track gap-4">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%231e293b'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 1%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 1" class="h-40 w-64 flex-none rounded-xl object-cover" />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%231e3a8a'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 2%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 2" class="h-40 w-64 flex-none rounded-xl object-cover" />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%230f766e'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 3%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 3" class="h-40 w-64 flex-none rounded-xl object-cover" />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%237a3e2f'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 4%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 4" class="h-40 w-64 flex-none rounded-xl object-cover" />
+
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%231e293b'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 1%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 1 duplicate" class="h-40 w-64 flex-none rounded-xl object-cover" />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%231e3a8a'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 2%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 2 duplicate" class="h-40 w-64 flex-none rounded-xl object-cover" />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%230f766e'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 3%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 3 duplicate" class="h-40 w-64 flex-none rounded-xl object-cover" />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%237a3e2f'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 4%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 4 duplicate" class="h-40 w-64 flex-none rounded-xl object-cover" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Theme toggle state persisted in local storage
+      const THEME_STORAGE_KEY = "portfolio-theme";
+      const themeToggle = document.getElementById("themeToggle");
+      const resumeImage = document.getElementById("resumeImage");
+      const body = document.body;
+      const resumeFallback =
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='800'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='38' font-family='Arial'%3Eresume.jpg placeholder%3C/text%3E%3C/svg%3E";
+      let resumeFallbackApplied = false;
+
+      function applyTheme(theme) {
+        const isNight = theme === "night";
+        body.classList.toggle("theme-night", isNight);
+        body.classList.toggle("theme-light", !isNight);
+        themeToggle.textContent = isNight ? "Switch to Light Mode" : "Switch to Night Mode";
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+      }
+
+      const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+      applyTheme(storedTheme === "light" ? "light" : "night");
+
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = body.classList.contains("theme-night") ? "light" : "night";
+        applyTheme(nextTheme);
+      });
+
+      resumeImage.addEventListener("error", () => {
+        if (!resumeFallbackApplied) {
+          resumeFallbackApplied = true;
+          resumeImage.src = resumeFallback;
+        }
+      });
+      const resumePath = (resumeImage.dataset.src || "").trim();
+      const isSafeResumePath = resumePath === "resume.jpg";
+      if (isSafeResumePath) {
+        resumeImage.src = resumePath;
+      } else {
+        resumeImage.src = resumeFallback;
+      }
+    </script>
+  </body>
+</html>
