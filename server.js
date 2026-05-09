@@ -59,14 +59,18 @@ const server = http.createServer(async (req, res) => {
     }
 
     const stream = fs.createReadStream(filePath);
-    stream.on("error", (streamError) => {
-      if (streamError.code === "ECONNRESET" || res.writableEnded) {
+    stream.on("error", () => {
+      if (res.writableEnded) {
         return;
       }
       if (!res.headersSent) {
         res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
       }
-      res.end("Internal Server Error");
+      try {
+        res.end("Internal Server Error");
+      } catch (responseError) {
+        return;
+      }
     });
     stream.pipe(res);
   } catch (err) {
