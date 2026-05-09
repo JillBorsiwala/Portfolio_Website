@@ -3,6 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Indian Egotist | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website for Indian Egotist showcasing projects, skills, and contact information."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top">Indian Egotist</a>
+      <button class="menu-toggle" type="button" aria-expanded="false">
+        Menu
+      </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Frontend Developer</p>
+          <h1>Building clean, fast, and delightful web experiences.</h1>
+          <p class="lead">
+            I design and build responsive websites with HTML, CSS, and vanilla
+            JavaScript. I love crafting accessible interfaces and polished
+            interactions.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button ghost" href="#contact">Let’s Talk</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <p class="card-title">Currently</p>
+          <p class="card-highlight">Open to freelance work</p>
+          <p class="card-description">
+            Available for landing pages, portfolios, and marketing sites.
+          </p>
+          <div class="hero-stats">
+            <div>
+              <span class="stat-value">12+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div>
+              <span class="stat-value">3+</span>
+              <span class="stat-label">Years</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <p>
+            I’m a developer who enjoys turning complex ideas into simple,
+            beautiful interfaces. My focus is on performance, accessibility,
+            and clean design systems.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Design First</h3>
+            <p>
+              I start with the user’s journey and ensure every interaction feels
+              intentional.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Accessible by Default</h3>
+            <p>
+              Semantic HTML, clear contrast, and keyboard navigation are always
+              part of my workflow.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Ship Fast</h3>
+            <p>
+              Lean codebases, fast loading times, and reusable components keep
+              projects moving.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p>A selection of work that demonstrates my range and focus.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Startup Landing Page</h3>
+            <p>
+              A conversion-focused landing page with responsive layouts and
+              smooth scroll interactions.
+            </p>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+          </article>
+          <article class="project-card">
+            <h3>Portfolio Redesign</h3>
+            <p>
+              A clean, modern portfolio site with accessible typography and
+              reusable components.
+            </p>
+            <span class="tag">Design</span>
+            <span class="tag">Accessibility</span>
+          </article>
+          <article class="project-card">
+            <h3>Product Microsite</h3>
+            <p>
+              A product highlight page featuring micro-interactions and
+              lightweight animations.
+            </p>
+            <span class="tag">Performance</span>
+            <span class="tag">UI</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>Tools and technologies I use to craft modern web experiences.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item">HTML5</div>
+          <div class="skill-item">CSS3</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">Responsive Design</div>
+          <div class="skill-item">Figma</div>
+          <div class="skill-item">Git &amp; GitHub</div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="section-header">
+          <h2>Let’s Build Something</h2>
+          <p>
+            Have a project in mind? I’d love to hear about it and help bring it
+            to life.
+          </p>
+        </div>
+        <div class="contact-card">
+          <div>
+            <h3>Get in touch</h3>
+            <p>
+              Email: <a href="mailto:hello@example.com">hello@example.com</a>
+            </p>
+            <p>
+              LinkedIn:
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"
+                >linkedin.com/in/yourprofile</a
+              >
+            </p>
+          </div>
+          <a class="button primary" href="mailto:hello@example.com"
+            >Send an Email</a
+          >
     <title>Portfolio Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -203,9 +369,17 @@
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%230f766e'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 3%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 3 duplicate" class="h-40 w-64 flex-none rounded-xl object-cover" />
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='190'%3E%3Crect width='100%25' height='100%25' fill='%237a3e2f'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='20' font-family='Arial'%3ECertificate 4%3C/text%3E%3C/svg%3E" alt="Certificate placeholder 4 duplicate" class="h-40 w-64 flex-none rounded-xl object-cover" />
           </div>
+
         </div>
       </section>
     </main>
+
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Indian Egotist. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 
     <script>
       // Theme toggle state persisted in local storage
@@ -247,5 +421,6 @@
         resumeImage.src = resumeFallback;
       }
     </script>
+
   </body>
 </html>
