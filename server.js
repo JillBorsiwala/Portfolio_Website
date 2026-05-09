@@ -20,8 +20,12 @@ const mimeTypes = {
 };
 
 const resolveFilePath = (urlPath) => {
-  const safePath = path.normalize(urlPath).replace(/^(\.\.[/\\])+/, "");
-  const relativePath = safePath === "/" ? "/index.html" : safePath;
+  const pathname = urlPath.split("?")[0].split("#")[0];
+  const normalizedPath = path.posix
+    .normalize(pathname)
+    .replace(/^(\.\.[/\\])+/, "")
+    .replace(/^\/+/, "");
+  const relativePath = normalizedPath === "" ? "index.html" : normalizedPath;
   return path.join(rootDir, relativePath);
 };
 
