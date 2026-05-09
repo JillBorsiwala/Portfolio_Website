@@ -1,5 +1,6 @@
-# Portfolio_Website
-It's my portfolio website built using Gemini-2.5 Pro. Learning stack: HTML, CSS, JavaScript (Vanilla).
+# Portfolio Website
+
+A clean, responsive portfolio website built with HTML, CSS, and vanilla JavaScript.
 
 ## Run locally
 
@@ -9,10 +10,26 @@ It's my portfolio website built using Gemini-2.5 Pro. Learning stack: HTML, CSS,
    npm install
    ```
 
-2. Start the web server:
+2. Start the local server:
 
    ```bash
    npm start
    ```
 
 3. Open http://localhost:3002 in your browser.
+
+## Run with Docker
+
+Build the image:
+
+```bash
+docker build -t portfolio-website .
+```
+
+Run the container:
+
+```bash
+docker run --rm -p 8080:80 portfolio-website
+```
+
+Then visit `http://localhost:8080` in your browser.
