@@ -4,6 +4,8 @@ A clean, responsive portfolio website built with HTML, CSS, and vanilla JavaScri
 
 ## Run locally
 
+From the repository root, run:
+
 1. Install dependencies:
 
    ```bash
