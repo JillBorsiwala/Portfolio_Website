@@ -3,9 +3,16 @@ It's my portfolio website built using Gemini-2.5 Pro. Learning stack: HTML, CSS,
 
 ## Run locally
 
-```bash
-npm install
-npm start
-```
+1. Install dependencies:
 
-Open http://localhost:3002 in your browser.
+   ```bash
+   npm install
+   ```
+
+2. Start the web server:
+
+   ```bash
+   npm start
+   ```
+
+3. Open http://localhost:3002 in your browser.
