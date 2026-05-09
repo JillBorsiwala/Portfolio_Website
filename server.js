@@ -26,7 +26,7 @@ const resolveFilePath = (urlPath) => {
 };
 
 const server = http.createServer((req, res) => {
-  if (!req.url || req.method !== "GET") {
+  if (!req.url || (req.method !== "GET" && req.method !== "HEAD")) {
     res.writeHead(405, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("Method Not Allowed");
     return;
@@ -41,14 +41,26 @@ const server = http.createServer((req, res) => {
 
   fs.readFile(filePath, (err, data) => {
     if (err) {
-      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end("Not Found");
+      if (err.code === "ENOENT") {
+        res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+        res.end("Not Found");
+        return;
+      }
+      res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+      res.end("Internal Server Error");
       return;
     }
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || "application/octet-stream";
-    res.writeHead(200, { "Content-Type": contentType });
+    res.writeHead(200, {
+      "Content-Type": contentType,
+      "Content-Length": data.length,
+    });
+    if (req.method === "HEAD") {
+      res.end();
+      return;
+    }
     res.end(data);
   });
 });

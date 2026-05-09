@@ -1,7 +1,7 @@
 {
-  "name": "portfolio_website",
+  "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "It's My portfolio Website built using Gemini-2.5 Pro. Using Learning Stack HTML, CSS, JavaScript (Vanilla).",
+  "description": "It's my portfolio website built using Gemini-2.5 Pro. Learning stack: HTML, CSS, JavaScript (Vanilla).",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
