@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "It's my portfolio website built using Gemini-2.5 Pro. Learning stack: HTML, CSS, JavaScript (Vanilla).",
+  "description": "A clean, responsive portfolio website built with HTML, CSS, and vanilla JavaScript.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/Indian-egotist/Portfolio_Website.git"
   },
-  "keywords": [],
+  "keywords": [
+    "portfolio",
+    "website",
+    "html",
+    "css",
+    "javascript"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
