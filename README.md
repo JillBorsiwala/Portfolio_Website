@@ -4,8 +4,21 @@ A clean, responsive portfolio website built with HTML, CSS, and vanilla JavaScri
 
 ## Run locally
 
-Open `index.html` directly in your browser, or use any static file server of
-your choice.
+From the repository root, run:
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Start the local server:
+
+   ```bash
+   npm start
+   ```
+
+3. Open http://localhost:3002 in your browser.
 
 ## Run with Docker
 
