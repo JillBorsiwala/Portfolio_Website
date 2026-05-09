@@ -1,0 +1,14 @@
+const yearElement = document.querySelector("#year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+  });
+}
