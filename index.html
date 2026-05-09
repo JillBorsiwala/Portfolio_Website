@@ -180,7 +180,6 @@
             <img
               id="resumeImage"
               data-src="resume.jpg"
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='800'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='38' font-family='Arial'%3Eresume.jpg placeholder%3C/text%3E%3C/svg%3E"
               alt="Placeholder resume preview for [Your Name], Full-Stack Developer"
               class="h-full w-full object-cover"
             />
@@ -244,6 +243,8 @@
       const isSafeResumePath = resumePath === "resume.jpg";
       if (isSafeResumePath) {
         resumeImage.src = resumePath;
+      } else {
+        resumeImage.src = resumeFallback;
       }
     </script>
   </body>
