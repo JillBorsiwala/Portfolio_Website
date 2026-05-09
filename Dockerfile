@@ -1,5 +1,5 @@
 FROM nginx:alpine
 
-COPY . /usr/share/nginx/html
+COPY index.html styles.css script.js /usr/share/nginx/html/
 
 EXPOSE 80
