@@ -166,19 +166,19 @@
           <p class="max-w-xl text-base leading-relaxed md:text-lg">
             This is placeholder intro text. Replace it with your professional summary, your core strengths, and the kind of impact you deliver in real-world projects.
           </p>
-          <a
-            href="#"
+          <button
+            type="button"
             class="inline-flex rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400"
           >
             Placeholder Call-to-Action
-          </a>
+          </button>
         </article>
 
         <aside class="mx-auto w-full max-w-md">
           <div class="overflow-hidden rounded-2xl border border-slate-300/40 bg-white/20 shadow-lg backdrop-blur-sm">
             <img
               src="resume.jpg"
-              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22640%22 height=%22800%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%230f172a%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23e2e8f0%22 font-size=%2238%22 font-family=%22Arial%22%3Eresume.jpg placeholder%3C/text%3E%3C/svg%3E';"
+              id="resumeImage"
               alt="Resume image placeholder"
               class="h-full w-full object-cover"
             />
@@ -210,7 +210,10 @@
       // Theme toggle state persisted in local storage
       const STORAGE_KEY = "portfolio-theme";
       const themeToggle = document.getElementById("themeToggle");
+      const resumeImage = document.getElementById("resumeImage");
       const body = document.body;
+      const resumeFallback =
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='800'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2e8f0' font-size='38' font-family='Arial'%3Eresume.jpg placeholder%3C/text%3E%3C/svg%3E";
 
       function applyTheme(theme) {
         const isNight = theme === "night";
@@ -227,6 +230,10 @@
         const nextTheme = body.classList.contains("theme-night") ? "light" : "night";
         applyTheme(nextTheme);
       });
+
+      resumeImage.addEventListener("error", () => {
+        resumeImage.src = resumeFallback;
+      }, { once: true });
     </script>
   </body>
 </html>
