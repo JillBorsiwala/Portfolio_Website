@@ -73,7 +73,9 @@ const server = http.createServer((req, res) => {
       if (!res.headersSent) {
         res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
       }
-      res.end("Internal Server Error");
+      if (!res.writableEnded) {
+        res.end("Internal Server Error");
+      }
     });
     stream.pipe(res);
   });
