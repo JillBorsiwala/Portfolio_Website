@@ -25,7 +25,7 @@ const resolveFilePath = (urlPath) => {
   return path.join(rootDir, relativePath);
 };
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   if (!req.url || (req.method !== "GET" && req.method !== "HEAD")) {
     res.writeHead(405, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("Method Not Allowed");
@@ -39,18 +39,8 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  fs.stat(filePath, (err, stats) => {
-    if (err) {
-      if (err.code === "ENOENT") {
-        res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-        res.end("Not Found");
-        return;
-      }
-      res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end("Internal Server Error");
-      return;
-    }
-
+  try {
+    const stats = await fs.promises.stat(filePath);
     if (!stats.isFile()) {
       res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("Not Found");
@@ -69,16 +59,25 @@ const server = http.createServer((req, res) => {
     }
 
     const stream = fs.createReadStream(filePath);
-    stream.on("error", () => {
+    stream.on("error", (streamError) => {
+      if (streamError.code === "ECONNRESET" || res.writableEnded) {
+        return;
+      }
       if (!res.headersSent) {
         res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
       }
-      if (!res.writableEnded) {
-        res.end("Internal Server Error");
-      }
+      res.end("Internal Server Error");
     });
     stream.pipe(res);
-  });
+  } catch (err) {
+    if (err.code === "ENOENT") {
+      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+      res.end("Not Found");
+      return;
+    }
+    res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end("Internal Server Error");
+  }
 });
 
 server.listen(port, () => {
