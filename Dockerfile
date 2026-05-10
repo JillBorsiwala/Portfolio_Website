@@ -1,5 +1,14 @@
-FROM nginx:alpine
+FROM node:18-alpine
 
-COPY index.html styles.css script.js /usr/share/nginx/html/
+WORKDIR /app
 
-EXPOSE 80
+COPY package*.json ./
+RUN npm ci --omit=dev
+
+COPY server.js ./
+COPY public ./public
+COPY views ./views
+
+EXPOSE 3002
+
+CMD ["node", "server.js"]
