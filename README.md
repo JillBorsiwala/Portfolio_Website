@@ -2,6 +2,15 @@
 
 A high-performance portfolio website built with Express, EJS templates, Tailwind CSS, and vanilla JavaScript.
 
+## Project structure
+
+- `server.js` runs the Express server.
+- `views/index.ejs` contains the main page markup.
+- `public/` holds static assets (CSS, JS, images).
+
+Replace `public/images/xyz.jpg` and `public/images/certificate1.jpg` with your own
+assets, or update the paths in `views/index.ejs`.
+
 ## Run locally
 
 From the repository root, run:
