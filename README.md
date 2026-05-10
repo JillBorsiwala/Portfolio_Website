@@ -8,8 +8,9 @@ A high-performance portfolio website built with Express, EJS templates, Tailwind
 - `views/index.ejs` contains the main page markup.
 - `public/` holds static assets (CSS, JS, images).
 
-Replace `public/images/xyz.jpg` and `public/images/certificate1.jpg` with your own
-assets, or update the paths in `views/index.ejs`.
+Replace `public/images/xyz.jpg` (hero image) and
+`public/images/certificate1.jpg` (certificate marquee) with your own assets, or
+update the paths in `views/index.ejs`.
 
 ## Run locally
 
