@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "A clean, responsive portfolio website built with HTML, CSS, and vanilla JavaScript.",
+  "description": "A high-performance portfolio website built with Express, EJS, Tailwind CSS, and vanilla JavaScript.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -16,7 +16,9 @@
     "website",
     "html",
     "css",
-    "javascript"
+    "javascript",
+    "express",
+    "tailwind"
   ],
   "author": "",
   "license": "ISC",
@@ -24,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/Indian-egotist/Portfolio_Website/issues"
   },
-  "homepage": "https://github.com/Indian-egotist/Portfolio_Website#readme"
+  "homepage": "https://github.com/Indian-egotist/Portfolio_Website#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
 }

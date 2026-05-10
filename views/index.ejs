@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Egotist | Cloud Engineer Portfolio</title>
+    <meta
+      name="description"
+      content="Cloud Engineer portfolio highlighting AWS infrastructure, deployment, and Hostinger management."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="theme-night">
+    <div class="page-wrapper min-h-screen flex flex-col">
+      <header class="site-header flex items-center justify-between px-6 lg:px-12 py-5">
+        <a class="text-lg font-semibold tracking-wide" href="#top">Indian Egotist</a>
+        <div class="flex items-center gap-4">
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Primary">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#certificates">Certificates</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </nav>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to light mode"
+            aria-pressed="false"
+          >
+            <svg
+              class="icon icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 3v2" />
+              <path d="M12 19v2" />
+              <path d="M5 5l1.5 1.5" />
+              <path d="M17.5 17.5L19 19" />
+              <path d="M3 12h2" />
+              <path d="M19 12h2" />
+              <path d="M5 19l1.5-1.5" />
+              <path d="M17.5 6.5L19 5" />
+            </svg>
+            <svg
+              class="icon icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M21 15.5A9 9 0 0 1 8.5 3a7.5 7.5 0 1 0 12.5 12.5Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="top" class="flex-1 px-6 lg:px-12 pb-16">
+        <section class="hero grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="hero-content flex flex-col gap-6">
+            <p class="eyebrow text-xs uppercase tracking-[0.35em]">Cloud Engineer</p>
+            <h1 class="text-4xl lg:text-5xl font-semibold leading-tight">
+              Building AWS-first infrastructure with reliable deployments.
+            </h1>
+            <p class="text-muted text-lg">
+              Hands-on with AWS cloud infrastructure (VPCs, EC2, S3, RDS, IAM) and
+              deployment pipelines that keep services resilient and cost-aware.
+              I also manage Hostinger web hosting, SSL, and domain configuration
+              to launch production-ready sites with confidence.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a class="btn btn-primary" href="#certificates">View Certifications</a>
+              <a class="btn btn-ghost" href="#contact">Let’s Talk</a>
+            </div>
+            <div class="flex flex-wrap gap-6 text-sm text-muted">
+              <span>AWS Infrastructure</span>
+              <span>Deployment Automation</span>
+              <span>Hostinger Management</span>
+            </div>
+          </div>
+          <div class="hero-media flex items-center justify-center">
+            <div class="image-frame">
+              <img
+                src="/images/xyz.jpg"
+                alt="Cloud infrastructure diagram preview"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section-spacing">
+          <div class="section-header">
+            <h2 class="text-2xl font-semibold">About</h2>
+            <p class="text-muted mt-2">
+              I partner with teams to design and maintain secure cloud
+              foundations, with a focus on reliability, scalability, and fast
+              deployments.
+            </p>
+          </div>
+          <div class="mt-8 grid gap-6 lg:grid-cols-3">
+            <div class="surface-card">
+              <h3 class="text-lg font-semibold">AWS Cloud Architecture</h3>
+              <p class="text-muted mt-3">
+                Designing VPCs, networking, and IAM strategies that keep your
+                infrastructure resilient and compliant.
+              </p>
+            </div>
+            <div class="surface-card">
+              <h3 class="text-lg font-semibold">Deployment Pipelines</h3>
+              <p class="text-muted mt-3">
+                Automating CI/CD workflows, monitoring, and rollback strategies
+                for safe, frequent releases.
+              </p>
+            </div>
+            <div class="surface-card">
+              <h3 class="text-lg font-semibold">Hostinger Operations</h3>
+              <p class="text-muted mt-3">
+                Managing web hosting, DNS, and domain renewals to keep your
+                online presence stable and discoverable.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section-spacing">
+          <div class="section-header">
+            <h2 class="text-2xl font-semibold">Recent Work</h2>
+            <p class="text-muted mt-2">
+              A snapshot of infrastructure and deployment initiatives delivering
+              reliable cloud operations.
+            </p>
+          </div>
+          <div class="mt-8 grid gap-6 lg:grid-cols-2">
+            <article class="surface-card">
+              <h3 class="text-lg font-semibold">Cloud Migration Blueprint</h3>
+              <p class="text-muted mt-3">
+                Planned a phased AWS migration with VPC segmentation, IAM
+                hardening, and cost tracking dashboards.
+              </p>
+            </article>
+            <article class="surface-card">
+              <h3 class="text-lg font-semibold">Deployment Automation Suite</h3>
+              <p class="text-muted mt-3">
+                Built GitHub Actions workflows to automate container builds,
+                blue/green releases, and post-deploy validations.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <section id="certificates" class="certificate-section">
+        <div class="mx-auto max-w-6xl px-6 lg:px-12">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <h2 class="text-2xl font-semibold">Certificates</h2>
+              <p class="text-muted mt-2">Hover over the marquee to pause.</p>
+            </div>
+            <span class="text-sm text-muted">AWS · Hosting · Security</span>
+          </div>
+        </div>
+        <div class="marquee" aria-label="Certificates">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <img src="/images/xyz.jpg" alt="AWS cloud practitioner certificate" />
+              <img src="/images/xyz.jpg" alt="AWS solutions architect certificate" />
+              <img src="/images/xyz.jpg" alt="Hostinger management certificate" />
+              <img src="/images/xyz.jpg" alt="Cloud deployment certificate" />
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+              <img src="/images/xyz.jpg" alt="AWS cloud practitioner certificate" />
+              <img src="/images/xyz.jpg" alt="AWS solutions architect certificate" />
+              <img src="/images/xyz.jpg" alt="Hostinger management certificate" />
+              <img src="/images/xyz.jpg" alt="Cloud deployment certificate" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-spacing px-6 lg:px-12">
+        <div class="surface-card flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h2 class="text-2xl font-semibold">Let’s build your cloud roadmap</h2>
+            <p class="text-muted mt-2">
+              Share your goals, and I’ll help design the infrastructure and
+              deployments that scale with you.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="mailto:hello@example.com">Schedule a Call</a>
+        </div>
+      </section>
+
+      <footer class="site-footer px-6 lg:px-12 py-8">
+        <p class="text-sm text-muted">
+          © <span id="year"></span> Indian Egotist. All rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

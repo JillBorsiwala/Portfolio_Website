@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A clean, responsive portfolio website built with HTML, CSS, and vanilla JavaScript.
+A high-performance portfolio website built with Express, EJS templates, Tailwind CSS, and vanilla JavaScript.
 
 ## Run locally
 
@@ -31,7 +31,7 @@ docker build -t portfolio-website .
 Run the container:
 
 ```bash
-docker run --rm -p 8080:80 portfolio-website
+docker run --rm -p 8080:3002 portfolio-website
 ```
 
 Then visit `http://localhost:8080` in your browser.
