@@ -225,6 +225,14 @@ body.theme-light .icon-moon {
   height: auto;
 }
 
+.hero-media .resume-preview {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+  border: 0;
+}
+
 .certificate-section {
   padding: 4rem 0 5rem;
   border-top: 1px solid var(--border);
