@@ -229,7 +229,7 @@ body.theme-light .icon-moon {
 .hero-media .resume-preview {
   border-radius: 20px;
   width: 100%;
-  height: 480px;
+  height: 580px;
   border: none;
   display: block;
 }
@@ -338,6 +338,6 @@ body.theme-light .icon-moon {
   }
 
   .hero-media .resume-preview {
-    height: 520px;
+    height: 580px;
   }
 }
