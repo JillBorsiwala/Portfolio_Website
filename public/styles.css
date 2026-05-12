@@ -6,7 +6,6 @@
   --accent: #38bdf8;
   --accent-strong: #0ea5e9;
   --button-text: #0f172a;
-  --spark-duration: 5s;
 }
 
 * {
@@ -200,7 +199,7 @@ body.theme-light .icon-moon {
 }
 
 .section-spacing {
-  padding-top: 4.5rem;
+  padding-top: 3.5rem;
 }
 
 .surface-card {
@@ -216,8 +215,9 @@ body.theme-light .icon-moon {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 28px;
-  padding: 1rem;
+  padding: 0.75rem;
   box-shadow: 0 25px 50px rgba(15, 23, 42, 0.2);
+  width: min(100%, 560px);
 }
 
 .hero-media img {
@@ -229,49 +229,21 @@ body.theme-light .icon-moon {
 .hero-media .resume-preview {
   border-radius: 20px;
   width: 100%;
-  height: 580px;
+  height: 520px;
   border: none;
   display: block;
 }
 
 .certificate-section {
-  padding: 4rem 0 4rem;
+  padding: 3rem 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: color-mix(in srgb, var(--surface) 60%, transparent);
 }
 
 .contact-section {
-  padding-top: 2.5rem;
-  margin-top: -0.5rem;
-}
-
-.click-spark {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.85);
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%) scale(0.6);
-  animation: spark-pop var(--spark-duration) ease-out forwards;
-}
-
-@keyframes spark-pop {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0.6);
-  }
-  25% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.3);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(2);
-  }
+  padding-top: 2rem;
+  margin-top: -0.25rem;
 }
 
 .marquee {
@@ -323,7 +295,7 @@ body.theme-light .icon-moon {
 
 @media (max-width: 768px) {
   .section-spacing {
-    padding-top: 3.5rem;
+    padding-top: 2.75rem;
   }
 
   .marquee img {
@@ -334,10 +306,10 @@ body.theme-light .icon-moon {
 
 @media (min-width: 1024px) {
   .hero {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
   }
 
   .hero-media .resume-preview {
-    height: 580px;
+    height: 520px;
   }
 }

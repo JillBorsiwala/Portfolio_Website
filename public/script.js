@@ -33,35 +33,3 @@ if (themeToggle) {
     localStorage.setItem("theme", nextTheme);
   });
 }
-
-const MAX_SPARKS = 25;
-const SPARK_DURATION = getComputedStyle(document.documentElement)
-  .getPropertyValue("--spark-duration")
-  .trim();
-const SPARK_DURATION_MS = (() => {
-  if (SPARK_DURATION.endsWith("ms")) {
-    return Number.parseFloat(SPARK_DURATION);
-  }
-  if (SPARK_DURATION.endsWith("s")) {
-    return Number.parseFloat(SPARK_DURATION) * 1000;
-  }
-  const asNumber = Number(SPARK_DURATION);
-  return Number.isFinite(asNumber) ? asNumber : 5000;
-})();
-
-document.addEventListener("click", (event) => {
-  const sparks = document.querySelectorAll(".click-spark");
-  if (sparks.length >= MAX_SPARKS) {
-    sparks[0].remove();
-  }
-
-  const spark = document.createElement("span");
-  spark.className = "click-spark";
-  spark.style.left = `${event.clientX}px`;
-  spark.style.top = `${event.clientY}px`;
-  document.body.appendChild(spark);
-
-  window.setTimeout(() => {
-    spark.remove();
-  }, SPARK_DURATION_MS);
-});
