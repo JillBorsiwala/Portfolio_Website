@@ -33,3 +33,15 @@ if (themeToggle) {
     localStorage.setItem("theme", nextTheme);
   });
 }
+
+document.addEventListener("click", (event) => {
+  const spark = document.createElement("span");
+  spark.className = "click-spark";
+  spark.style.left = `${event.clientX}px`;
+  spark.style.top = `${event.clientY}px`;
+  document.body.appendChild(spark);
+
+  window.setTimeout(() => {
+    spark.remove();
+  }, 5000);
+});

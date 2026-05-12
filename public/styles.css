@@ -228,16 +228,49 @@ body.theme-light .icon-moon {
 .hero-media .resume-preview {
   border-radius: 20px;
   width: 100%;
-  height: 420px;
+  height: 480px;
   border: none;
   display: block;
 }
 
 .certificate-section {
-  padding: 4rem 0 5rem;
+  padding: 4rem 0 4rem;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: color-mix(in srgb, var(--surface) 60%, transparent);
+}
+
+.contact-section {
+  padding-top: 2.5rem;
+  margin-top: -0.5rem;
+}
+
+.click-spark {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.85);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(0.6);
+  animation: spark-pop 5s ease-out forwards;
+}
+
+@keyframes spark-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
 }
 
 .marquee {
@@ -295,5 +328,15 @@ body.theme-light .icon-moon {
   .marquee img {
     width: 180px;
     height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .hero-media .resume-preview {
+    height: 520px;
   }
 }
