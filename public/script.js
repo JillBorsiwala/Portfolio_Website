@@ -34,7 +34,14 @@ if (themeToggle) {
   });
 }
 
+const MAX_SPARKS = 25;
+
 document.addEventListener("click", (event) => {
+  const sparks = document.querySelectorAll(".click-spark");
+  if (sparks.length >= MAX_SPARKS) {
+    sparks[0].remove();
+  }
+
   const spark = document.createElement("span");
   spark.className = "click-spark";
   spark.style.left = `${event.clientX}px`;
