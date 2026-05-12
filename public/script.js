@@ -35,6 +35,19 @@ if (themeToggle) {
 }
 
 const MAX_SPARKS = 25;
+const SPARK_DURATION = getComputedStyle(document.documentElement)
+  .getPropertyValue("--spark-duration")
+  .trim();
+const SPARK_DURATION_MS = (() => {
+  if (SPARK_DURATION.endsWith("ms")) {
+    return Number.parseFloat(SPARK_DURATION);
+  }
+  if (SPARK_DURATION.endsWith("s")) {
+    return Number.parseFloat(SPARK_DURATION) * 1000;
+  }
+  const asNumber = Number(SPARK_DURATION);
+  return Number.isFinite(asNumber) ? asNumber : 5000;
+})();
 
 document.addEventListener("click", (event) => {
   const sparks = document.querySelectorAll(".click-spark");
@@ -50,5 +63,5 @@ document.addEventListener("click", (event) => {
 
   window.setTimeout(() => {
     spark.remove();
-  }, 5000);
+  }, SPARK_DURATION_MS);
 });

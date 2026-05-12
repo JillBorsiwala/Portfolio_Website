@@ -6,6 +6,7 @@
   --accent: #38bdf8;
   --accent-strong: #0ea5e9;
   --button-text: #0f172a;
+  --spark-duration: 5s;
 }
 
 * {
@@ -255,7 +256,7 @@ body.theme-light .icon-moon {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%) scale(0.6);
-  animation: spark-pop 5s ease-out forwards;
+  animation: spark-pop var(--spark-duration) ease-out forwards;
 }
 
 @keyframes spark-pop {
