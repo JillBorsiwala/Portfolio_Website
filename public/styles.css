@@ -111,6 +111,20 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
 .nav-link {
   color: var(--muted);
   transition: color 0.3s ease;
@@ -265,7 +279,8 @@ body.theme-light .icon-moon {
   padding: 0 1.5rem;
 }
 
-.marquee img {
+.certificate-item {
+  display: block;
   width: 220px;
   height: 140px;
   object-fit: cover;
@@ -273,6 +288,10 @@ body.theme-light .icon-moon {
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
+}
+
+.certificate-item.certificate-pdf {
+  border: 1px solid var(--border);
 }
 
 .certificate-section:hover .marquee-track {
@@ -298,7 +317,7 @@ body.theme-light .icon-moon {
     padding-top: 2.75rem;
   }
 
-  .marquee img {
+  .certificate-item {
     width: 180px;
     height: 120px;
   }
