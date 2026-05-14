@@ -249,6 +249,17 @@ body.theme-light .icon-moon {
   background: #ffffff;
 }
 
+.resume-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.resume-link:hover {
+  color: var(--accent-strong);
+}
+
 .certificate-section {
   padding: 3.5rem 0;
   border-top: 1px solid var(--border);
