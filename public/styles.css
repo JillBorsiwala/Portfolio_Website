@@ -242,8 +242,11 @@ body.theme-light .icon-moon {
 
 .hero-media .resume-preview {
   border-radius: 20px;
-  width: 100%;
-  height: 520px;
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+  height: auto;
+  margin: 0 auto;
   display: block;
   object-fit: contain;
   background: #ffffff;
@@ -377,10 +380,6 @@ body.theme-light .icon-moon {
 @media (min-width: 1024px) {
   .hero {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
-  }
-
-  .hero-media .resume-preview {
-    height: 520px;
   }
 
   .contact-card {
