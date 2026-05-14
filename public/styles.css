@@ -213,7 +213,7 @@ body.theme-light .icon-moon {
 }
 
 .section-spacing {
-  padding-top: 3.5rem;
+  padding-top: 4.25rem;
 }
 
 .surface-card {
@@ -244,20 +244,55 @@ body.theme-light .icon-moon {
   border-radius: 20px;
   width: 100%;
   height: 520px;
-  border: none;
   display: block;
+  object-fit: contain;
+  background: #ffffff;
 }
 
 .certificate-section {
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: color-mix(in srgb, var(--surface) 60%, transparent);
 }
 
 .contact-section {
-  padding-top: 2rem;
-  margin-top: -0.25rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3.5rem;
+  margin-top: 0;
+}
+
+.contact-card {
+  padding: 1.75rem 1.9rem;
+  gap: 1.25rem;
+}
+
+.contact-content {
+  max-width: 900px;
+}
+
+.contact-links {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text);
+  font-weight: 500;
+  width: fit-content;
+}
+
+.contact-link:hover {
+  color: var(--accent-strong);
+}
+
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .marquee {
@@ -314,7 +349,12 @@ body.theme-light .icon-moon {
 
 @media (max-width: 768px) {
   .section-spacing {
+    padding-top: 3rem;
+  }
+
+  .contact-section {
     padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
   }
 
   .certificate-item {
@@ -330,5 +370,9 @@ body.theme-light .icon-moon {
 
   .hero-media .resume-preview {
     height: 520px;
+  }
+
+  .contact-card {
+    padding: 2rem;
   }
 }
