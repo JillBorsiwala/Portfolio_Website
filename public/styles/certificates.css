@@ -1,0 +1,82 @@
+html, body {
+  margin: 0; padding: 0; min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+body.day-mode {
+  background: linear-gradient(to bottom, #aeefff 0%, #e0f7fc 60%, #fffbe8 100%);
+  color: #2d3a4a;
+}
+
+/* Perfect Dead-Center Navbar Layout */
+.cert-navbar {
+  display: flex;
+  justify-content: center; /* Centers the content block */
+  align-items: center;
+  background: #fffbe8;
+  height: 68px;
+  box-shadow: 0 2px 6px rgba(35, 160, 255, 0.08);
+  position: sticky; top: 0; z-index: 10;
+}
+.navbar-center-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cert-title {
+  font-size: 2.2rem; font-weight: 700; letter-spacing: 0.04em;
+  margin: 0;
+}
+.navbar-aws {
+  position: absolute;
+  left: 20px; /* Securely pins AWS.pdf to the left side of the title block area */
+  font-weight: 600;
+  background: #aeefff; 
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none; color: #15698b;
+  transition: transform 0.2s;
+}
+.navbar-aws:hover { transform: scale(1.03); }
+
+/* Section layout */
+.cert-section { margin: 60px auto 0 auto; max-width: 1100px; overflow: hidden; }
+.cert-section h2 { margin: 0 0 15px 10px; font-size: 1.4rem; letter-spacing: 0.02em; }
+
+.cert-row {
+  display: flex;
+  gap: 18px;
+  width: max-content; /* Critical: Allows contents to expand beyond screen boundaries smoothly */
+  position: relative;
+  min-height: 230px;
+  padding: 10px;
+}
+
+/* PDF Cards */
+.pdf-card {
+  width: 180px; min-width: 180px; max-width: 180px;
+  height: 210px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(35, 160, 255, 0.12);
+  display: flex; flex-direction: column; align-items: center; 
+  overflow: hidden;
+}
+.pdf-frame { width: 180px; height: 160px; border: none; pointer-events: none; }
+.filename { font-size: .85rem; margin: 8px 4px 0 4px; word-break: break-all; text-align: center; }
+
+/* Perfect Loop Marquee Animation */
+.marquee-active {
+  animation: loop-scroll 25s linear infinite;
+  animation-direction: var(--marquee-direction, normal);
+}
+.marquee-active:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes loop-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-distance))); }
+}

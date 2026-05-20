@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="/styles/certificates.css" />
+    <script src="/js/certificates.js" defer></script>
+  </head>
+  <body class="day-mode">
+    <nav class="cert-navbar">
+      <div class="navbar-center-wrapper">
+        <a href="/CERTIS/AWS.pdf" class="navbar-aws" target="_blank">AWS.pdf</a>
+        <h1 class="cert-title">Certificates</h1>
+      </div>
+    </nav>
+
+    <main>
+      <section id="genai" class="cert-section" data-direction="ltr">
+        <h2>Generative Artificial Intelligence</h2>
+        <div class="cert-row" data-certs="<%= JSON.stringify(certs.genai) %>"></div>
+      </section>
+      
+      <section id="edunet" class="cert-section" data-direction="rtl">
+        <h2>SAP Edunet Foundation</h2>
+        <div class="cert-row" data-certs="<%= JSON.stringify(certs.edunet) %>"></div>
+      </section>
+      
+      <section id="extracurricular" class="cert-section" data-direction="ltr">
+        <h2>Extra-Curricular</h2>
+        <div class="cert-row" data-certs="<%= JSON.stringify(certs.extracurricular) %>"></div>
+      </section>
+    </main>
+  </body>
+</html>
