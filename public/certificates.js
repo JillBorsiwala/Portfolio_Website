@@ -81,11 +81,17 @@ function displayCertificates(filter) {
   `).join('');
 }
 
+// Extract filename from PDF URL for download
+function getFileNameFromUrl(url) {
+  return url.split('/').pop();
+}
+
 // Open certificate modal
 function openModal(certId) {
   const cert = allCertificates.find(c => c.id === certId);
   if (!cert) return;
   
+  const fileName = getFileNameFromUrl(cert.pdfUrl);
   const modalBody = document.getElementById('modalBody');
   modalBody.innerHTML = `
     <div style="text-align: center;">
@@ -115,7 +121,7 @@ function openModal(certId) {
       <a href="${cert.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center; text-decoration: none;">
         View PDF ↗
       </a>
-      <a href="${cert.pdfUrl}" download class="btn btn-ghost" style="flex: 1; text-align: center; text-decoration: none;">
+      <a href="${cert.pdfUrl}" download="${fileName}" class="btn btn-ghost" style="flex: 1; text-align: center; text-decoration: none;">
         Download
       </a>
     </div>
