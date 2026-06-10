@@ -1,6 +1,6 @@
 // Certificate Management System
 let allCertificates = [];
-let currentFilter = 'Cloud';
+let currentFilter = 'All';
 
 // Fetch certificates data
 async function loadCertificates() {
@@ -45,10 +45,11 @@ function displayCertificates(filter) {
   const emptyState = document.getElementById('emptyState');
   
   let filtered;
-  if (filter === 'Cloud') {
+  if (filter === 'All') {
     // Show all certificates when "All" is clicked
     filtered = allCertificates;
   } else {
+    // Filter by specific category
     filtered = allCertificates.filter(cert => cert.category === filter);
   }
   
@@ -135,7 +136,7 @@ function setupEventListeners() {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       this.classList.add('active');
-      currentFilter = this.dataset.filter || 'Cloud';
+      currentFilter = this.dataset.filter || 'All';
       displayCertificates(currentFilter);
     });
   });
