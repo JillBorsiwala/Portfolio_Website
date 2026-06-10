@@ -24,14 +24,14 @@
     },
     {
       "id": 3,
-      "title": "Cloud Architecture Essentials",
-      "issuer": "Cloud Training Institute",
+      "title": "SAP Certified Backend Developer - ABAP Cloud",
+      "issuer": "SAP",
       "category": "Cloud",
       "issueDate": "2025-10-18",
-      "credentialId": "CAE-003",
+      "credentialId": "SAP-ABAP-003",
       "pdfUrl": "/CERTIS/CLOUD (3).pdf",
-      "badgeImage": "/images/software-engineering-essentials.png",
-      "skills": ["Architecture Design", "Scalability", "High Availability"]
+      "badgeImage": "/images/sap-certified-back-end-developer-abap-cloud.png",
+      "skills": ["ABAP Cloud", "Backend Development", "SAP Cloud Platform"]
     },
     {
       "id": 4,
