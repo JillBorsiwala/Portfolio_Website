@@ -7,7 +7,7 @@
       "category": "Cloud",
       "issueDate": "2026-03-11",
       "credentialId": "AWS-CLF-001",
-      "pdfUrl": "/CERTIS/CLOUD.pdf",
+      "pdfUrl": "/CERTIS/CLOUD (2).pdf",
       "badgeImage": "/images/aws-academy-graduate-cloud-foundations-training-bad.png",
       "skills": ["AWS", "Cloud Architecture", "EC2", "S3"]
     },
@@ -18,7 +18,7 @@
       "category": "Cloud",
       "issueDate": "2026-06-05",
       "credentialId": "AWS-CCP-002",
-      "pdfUrl": "/CERTIS/CLOUD (2).pdf",
+      "pdfUrl": "/CERTIS/CLOUD.pdf",
       "badgeImage": "/images/aws-certified-cloud-practitioner.png",
       "skills": ["AWS Fundamentals", "Cloud Computing", "Security Basics"]
     },
@@ -145,18 +145,18 @@
     },
     {
       "id": 14,
-      "title": "Edunet Foundation - Module 11",
-      "issuer": "Edunet Foundation",
-      "category": "Edunet",
-      "issueDate": "2025-06-25",
-      "credentialId": "EDF-011",
+      "title": "SAP ABAP Platform Fundamentals",
+      "issuer": "SAP",
+      "category": "Cloud",
+      "issueDate": "2026-01-21",
+      "credentialId": "SAP-ABAP-001",
       "pdfUrl": "/CERTIS/edunet_ (11).pdf",
-      "badgeImage": null,
-      "skills": ["Enterprise Architecture", "Solutions Design", "Team Leadership"]
+      "badgeImage": "/images/introducing-sap-abap-platform-fundamentals-record-o.png",
+      "skills": ["SAP ABAP Cloud", "Platform Fundamentals", "Programming"]
     },
     {
       "id": 15,
-      "title": "Edunet Foundation - Module 12",
+      "title": "Edunet Foundation - Module 11",
       "issuer": "Edunet Foundation",
       "category": "Edunet",
       "issueDate": "2025-07-10",
@@ -266,25 +266,25 @@
     },
     {
       "id": 25,
-      "title": "SAP ABAP Platform Fundamentals",
-      "issuer": "SAP",
+      "title": "Cyber Job Simulation",
+      "issuer": "Deloitte",
       "category": "Others",
-      "issueDate": "2026-01-21",
-      "credentialId": "SAP-ABAP-001",
+      "issueDate": "2025-10-19",
+      "credentialId": "Cyber-Job-01",
       "pdfUrl": "/CERTIS/Other.pdf",
-      "badgeImage": "/images/introducing-sap-abap-platform-fundamentals-record-o.png",
-      "skills": ["SAP ABAP", "Platform Fundamentals", "Programming"]
+      "badgeImage": null,
+      "skills": ["Cyber Security", "Job Simulation", "Forage"]
     },
     {
       "id": 26,
-      "title": "SAP Certified Backend Developer - ABAP Cloud",
-      "issuer": "SAP",
+      "title": "Data Analytics Simulation",
+      "issuer": "Accenture",
       "category": "Others",
-      "issueDate": "2026-04-10",
-      "credentialId": "SAP-ABAP-002",
+      "issueDate": "2024-05-07",
+      "credentialId": "Data-Analytics",
       "pdfUrl": "/CERTIS/Other (1).pdf",
-      "badgeImage": "/images/sap-certified-back-end-developer-abap-cloud.png",
-      "skills": ["ABAP Cloud", "Backend Development", "SAP Cloud Platform"]
+      "badgeImage": null,
+      "skills": ["Data Analytics", "Tableau", "MS Excel"]
     },
     {
       "id": 27,
@@ -293,7 +293,7 @@
       "category": "Others",
       "issueDate": "2025-07-07",
       "credentialId": "MCK-FWD-001",
-      "pdfUrl": "/CERTIS/Other (2).pdf",
+      "pdfUrl": "/CERTIS/Other (5).pdf",
       "badgeImage": "/images/mckinsey-org-forward-program.png",
       "skills": ["Organizational Development", "Strategic Thinking", "Change Management"]
     },
@@ -326,7 +326,7 @@
       "category": "Others",
       "issueDate": "2025-12-08",
       "credentialId": "IND-EXC-001",
-      "pdfUrl": "/CERTIS/Other (5).pdf",
+      "pdfUrl": "/CERTIS/Other (2).pdf",
       "badgeImage": null,
       "skills": ["Industry Best Practices", "Excellence", "Innovation"]
     }
