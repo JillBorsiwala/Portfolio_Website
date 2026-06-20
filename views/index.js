@@ -259,54 +259,69 @@
       </section>
 
       <section id="contact" class="section-spacing contact-section px-6 lg:px-12">
-        <div class="surface-card contact-card flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div class="contact-content">
-            <h2 class="text-2xl font-semibold">Let's build your cloud roadmap</h2>
-            <p class="text-muted mt-2">
-              Share your goals, and I'll help manage the infrastructure and deployments that scale with you.
-            </p>
-            <div class="contact-links mt-5">
-              <div class="contact-links-row">
-                <a class="contact-link" href="mailto:jborsiwala@gmail.com" aria-label="Email Jill Borsiwala">
-                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M3.5 6.75A2.25 2.25 0 0 1 5.75 4.5h12.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25H5.75a2.25 2.25 0 0 1-2.25-2.25V6.75Zm1.6-.48 6.45 4.59a.75.75 0 0 0 .9 0l[...]
-                    />
-                  </svg>
-                  <span>jborsiwala@gmail.com    </span>
+        <div class="surface-card contact-card">
+          <div class="contact-grid">
+            <div class="contact-content">
+              <h2 class="text-2xl font-semibold">Let’s build your cloud roadmap</h2>
+              <p class="text-muted mt-2">
+                Reach out for cloud architecture, automation, and deployment support. Pick the channel that works best for you.
+              </p>
+              <div class="contact-actions mt-6" role="list">
+                <a class="contact-action" href="mailto:jborsiwala@gmail.com" aria-label="Email Jill Borsiwala">
+                  <span class="contact-action-title">Email</span>
+                  <span class="contact-action-value">jborsiwala@gmail.com</span>
                 </a>
                 <a
-                  class="contact-link"
+                  class="contact-action"
                   href="https://github.com/JillBorsiwala"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Jill Borsiwala GitHub profile (opens in new tab)"
                 >
-                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 2.1a10 10 0 0 0-3.16 19.5c.5.1.69-.22.69-.49v-1.71c-2.8.61-3.39-1.18-3.39-1.18-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1.02.07 1.56 1.05 1.56 1.05.9 1.55 2[...]
-                    />
-                  </svg>
-                  <span>github.com/JillBorsiwala</span>
+                  <span class="contact-action-title">GitHub</span>
+                  <span class="contact-action-value">github.com/JillBorsiwala</span>
+                </a>
+                <a
+                  class="contact-action"
+                  href="https://www.linkedin.com/in/jill-borsiwala-926764288/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Jill Borsiwala LinkedIn profile (opens in new tab)"
+                >
+                  <span class="contact-action-title">LinkedIn</span>
+                  <span class="contact-action-value">linkedin.com/in/jill-borsiwala-926764288</span>
+                </a>
+                <a class="contact-action contact-action-resume" href="/images/resume.pdf" download="Jill-Borsiwala-Resume.pdf">
+                  <span class="contact-action-title">Resume</span>
+                  <span class="contact-action-value">Download PDF</span>
                 </a>
               </div>
-              <a
-                class="contact-link"
-                href="https://www.linkedin.com/in/jill-borsiwala-926764288/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Jill Borsiwala LinkedIn profile (opens in new tab)"
-              >
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M6.94 8.5a1.81 1.81 0 1 0 0-3.62 1.81 1.81 0 0 0 0 3.62Zm-1.6 2.1h3.2v8.9h-3.2v-8.9Zm5.19 0h3.07v1.22h.04c.43-.81 1.48-1.67 3.05-1.67 3.26 0 3.86 2.06 3.86 4.75v4.6h-3.2v-4[...]
-                  />
-                </svg>
-                <span>linkedin.com/in/jill-borsiwala-926764288</span>
-              </a>
             </div>
+            <form id="contactForm" class="contact-form" novalidate>
+              <h3 class="text-lg font-semibold">Quick message</h3>
+              <p class="text-sm text-muted">I will prefill an email draft with your message.</p>
+              <label class="contact-field" for="contactName">
+                <span>Name</span>
+                <input id="contactName" type="text" name="name" autocomplete="name" required />
+              </label>
+              <p class="field-error" data-error-for="name"></p>
+              <label class="contact-field" for="contactEmail">
+                <span>Email</span>
+                <input id="contactEmail" type="email" name="email" autocomplete="email" required />
+              </label>
+              <p class="field-error" data-error-for="email"></p>
+              <label class="contact-field" for="contactMessage">
+                <span>Message</span>
+                <textarea id="contactMessage" name="message" rows="4" required></textarea>
+              </label>
+              <p class="field-error" data-error-for="message"></p>
+              <button type="submit" class="btn btn-primary">Send message</button>
+              <p id="contactFormStatus" class="text-sm text-muted" aria-live="polite"></p>
+              <noscript>
+                <p class="text-sm text-muted">JavaScript is required for this quick-message form. You can always email me directly at jborsiwala@gmail.com.</p>
+              </noscript>
+            </form>
           </div>
-          <a class="btn btn-primary" href="mailto:jborsiwala@gmail.com">Contact me</a>
         </div>
       </section>
 

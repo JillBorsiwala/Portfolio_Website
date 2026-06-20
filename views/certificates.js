@@ -262,7 +262,7 @@
       <section class="mb-8">
         <h2 class="text-lg font-semibold mb-4">Filter by Category</h2>
         <div class="flex flex-wrap gap-3">
-          <button class="filter-btn active" data-filter="Cloud">All Certificates</button>
+          <button class="filter-btn active" data-filter="All">All Certificates</button>
           <button class="filter-btn" data-filter="Cloud">Cloud</button>
           <button class="filter-btn" data-filter="Edunet">Edunet</button>
           <button class="filter-btn" data-filter="GenAI">GenAI</button>
