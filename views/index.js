@@ -300,23 +300,26 @@
             <form id="contactForm" class="contact-form" novalidate>
               <h3 class="text-lg font-semibold">Quick message</h3>
               <p class="text-sm text-muted">I will prefill an email draft with your message.</p>
-              <label class="contact-field">
+              <label class="contact-field" for="contactName">
                 <span>Name</span>
-                <input type="text" name="name" autocomplete="name" required />
+                <input id="contactName" type="text" name="name" autocomplete="name" required />
               </label>
               <p class="field-error" data-error-for="name"></p>
-              <label class="contact-field">
+              <label class="contact-field" for="contactEmail">
                 <span>Email</span>
-                <input type="email" name="email" autocomplete="email" required />
+                <input id="contactEmail" type="email" name="email" autocomplete="email" required />
               </label>
               <p class="field-error" data-error-for="email"></p>
-              <label class="contact-field">
+              <label class="contact-field" for="contactMessage">
                 <span>Message</span>
-                <textarea name="message" rows="4" required></textarea>
+                <textarea id="contactMessage" name="message" rows="4" required></textarea>
               </label>
               <p class="field-error" data-error-for="message"></p>
               <button type="submit" class="btn btn-primary">Send message</button>
               <p id="contactFormStatus" class="text-sm text-muted" aria-live="polite"></p>
+              <noscript>
+                <p class="text-sm text-muted">JavaScript is required for this quick-message form. You can always email me directly at jborsiwala@gmail.com.</p>
+              </noscript>
             </form>
           </div>
         </div>
