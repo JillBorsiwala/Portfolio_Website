@@ -291,7 +291,7 @@
                   <span class="contact-action-title">LinkedIn</span>
                   <span class="contact-action-value">linkedin.com/in/jill-borsiwala-926764288</span>
                 </a>
-                <a class="contact-action contact-action-resume" href="/images/resume.pdf" download>
+                <a class="contact-action contact-action-resume" href="/images/resume.pdf" download="Jill-Borsiwala-Resume.pdf">
                   <span class="contact-action-title">Resume</span>
                   <span class="contact-action-value">Download PDF</span>
                 </a>
