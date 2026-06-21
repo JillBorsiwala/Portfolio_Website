@@ -1,0 +1,9 @@
+---
+applications:
+  - name: my-portfolio
+    memory: 256M
+    instances: 1
+    buildpack: nodejs_buildpack
+    path: .
+    command: npm start
+    random-route: true
