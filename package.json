@@ -29,6 +29,7 @@
   "homepage": "https://github.com/Indian-egotist/Portfolio_Website#readme",
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "build": "^0.1.4",
     "ejs": "^5.0.2",
     "express": "^5.2.1"
   }

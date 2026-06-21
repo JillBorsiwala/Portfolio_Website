@@ -21,7 +21,7 @@
           <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Primary">
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="#certificates">Certificates</a>
+            <a class="nav-link" href="/certificates">Certificates</a>
             <a class="nav-link" href="#contact">Contact</a>
           </nav>
           <button
@@ -84,8 +84,8 @@
               keep production sites reliable, 24/7 online with low-latency.
             </p>
             <div class="flex flex-wrap gap-4">
-              <a class="btn btn-primary" href="#certificates">View Certifications</a>
-              <a class="btn btn-ghost" href="#contact">Let’s Talk</a>
+              <a class="btn btn-primary" href="/certificates">View Certifications</a>
+              <a class="btn btn-ghost" href="#contact">Let's Talk</a>
             </div>
             <div class="flex flex-wrap gap-6 text-sm text-muted">
               <span>AWS Infrastructure</span>
@@ -102,7 +102,7 @@
               />
               <a
                 class="resume-link"
-                href="/images/Jill%20Borsiwala_MBIT%20%281%29.pdf"
+                href="/images/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View full resume (opens in new tab)"
@@ -117,7 +117,7 @@
           <div class="section-header">
             <h2 class="text-2xl font-semibold">About</h2>
             <p class="text-muted mt-2">
-              I’m an experienced Cloud Architect Engineer working across AWS,
+              I'm an experienced Cloud Architect Engineer working across AWS,
               Digital Ocean, Vercel, and Hostinger to deliver reliable, scalable,
               and secure deployments.
             </p>
@@ -177,13 +177,13 @@
       <section id="certificates" class="certificate-section">
           <div class="mx-auto max-w-6xl px-6 lg:px-12">
             <div class="flex flex-wrap items-center justify-between gap-4">
-              <a href="https://www.credly.com/users/jill-borsiwala">
-                <h2 class="text-2xl font-semibold">Certificates</h2>
+              <a href="/certificates">
+                <h2 class="text-2xl font-semibold hover:text-blue-500 transition-colors">Certificates</h2>
               </a>
-              <span class="text-sm text-muted">AWS · Hosting · Security</span>
+              <span class="text-sm text-muted">AWS · Edunet · GenAI · SAP</span>
             </div>
             <p class="text-muted mt-2 text-center">
-              I was enrolled in external courses like SAP Code Unnati and AWS Academy.
+              Professional certifications demonstrating expertise across cloud computing, AI/GenAI, and enterprise development.
             </p>
           </div>
       
@@ -198,29 +198,29 @@
               />
               <img
                 class="certificate-item"
-                src="/images/mckinsey-org-forward-program.png"
-                alt="McKinsey.org Forward Program"
+                src="/images/aws-certified-cloud-practitioner.png"
+                alt="AWS Certified Cloud Practitioner"
+              />
+              <img
+                class="certificate-item"
+                src="/images/introducing-sap-abap-platform-fundamentals-record-o.png"
+                alt="SAP ABAP Platform Fundamentals"
               />
               <img
                 class="certificate-item"
                 src="/images/sap-certified-back-end-developer-abap-cloud.png"
-                alt="SAP Certified Back-End Developer - ABAP Cloud"
+                alt="SAP Certified Backend Developer - ABAP Cloud"
+              />
+              <img
+                class="certificate-item"
+                src="/images/mckinsey-org-forward-program.png"
+                alt="McKinsey.org Forward Program"
               />
               <img
                 class="certificate-item"
                 src="/images/software-engineering-essentials.png"
                 alt="Software Engineering Essentials"
               />
-              <iframe
-                class="certificate-item certificate-pdf"
-                src="/images/ElectronicArts_Softwareengineering.pdf#page=1&zoom=page-fit"
-                title="Electronic Arts Software Engineering Certificate"
-              ></iframe>
-              <iframe
-                class="certificate-item certificate-pdf"
-                src="/images/Jill_2124_BrieaCertificate.pdf#page=1&zoom=page-fit"
-                title="Briea Certificate"
-              ></iframe>
             </div>
             <div class="marquee-group" aria-hidden="true">
               <img
@@ -230,84 +230,98 @@
               />
               <img
                 class="certificate-item"
-                src="/images/mckinsey-org-forward-program.png"
-                alt="McKinsey.org Forward Program"
+                src="/images/aws-certified-cloud-practitioner.png"
+                alt="AWS Certified Cloud Practitioner"
+              />
+              <img
+                class="certificate-item"
+                src="/images/introducing-sap-abap-platform-fundamentals-record-o.png"
+                alt="SAP ABAP Platform Fundamentals"
               />
               <img
                 class="certificate-item"
                 src="/images/sap-certified-back-end-developer-abap-cloud.png"
-                alt="SAP Certified Back-End Developer - ABAP Cloud"
+                alt="SAP Certified Backend Developer - ABAP Cloud"
+              />
+              <img
+                class="certificate-item"
+                src="/images/mckinsey-org-forward-program.png"
+                alt="McKinsey.org Forward Program"
               />
               <img
                 class="certificate-item"
                 src="/images/software-engineering-essentials.png"
                 alt="Software Engineering Essentials"
               />
-              <iframe
-                class="certificate-item certificate-pdf"
-                src="/images/ElectronicArts_Softwareengineering.pdf#page=1&zoom=page-fit"
-                title="Electronic Arts Software Engineering Certificate"
-              ></iframe>
-              <iframe
-                class="certificate-item certificate-pdf"
-                src="/images/Jill_2124_BrieaCertificate.pdf#page=1&zoom=page-fit"
-                title="Briea Certificate"
-              ></iframe>
             </div>
           </div>
         </div>
       </section>
 
       <section id="contact" class="section-spacing contact-section px-6 lg:px-12">
-        <div class="surface-card contact-card flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div class="contact-content">
-            <h2 class="text-2xl font-semibold">Let’s build your cloud roadmap</h2>
-            <p class="text-muted mt-2">
-              Share your goals, and I’ll help design the infrastructure and
-              deployments that scale with you.
-            </p>
-            <div class="contact-links mt-5">
-              <div class="contact-links-row">
-                <a class="contact-link" href="mailto:jborsiwala@gmail.com" aria-label="Email Jill Borsiwala">
-                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M3.5 6.75A2.25 2.25 0 0 1 5.75 4.5h12.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25H5.75a2.25 2.25 0 0 1-2.25-2.25V6.75Zm1.6-.48 6.45 4.59a.75.75 0 0 0 .9 0l6.45-4.59a.75.75 0 1 0-.87-1.23L12 9.45 5.97 5.04a.75.75 0 0 0-.87 1.23Z"
-                    />
-                  </svg>
-                  <span>jborsiwala@gmail.com</span>
+        <div class="surface-card contact-card">
+          <div class="contact-grid">
+            <div class="contact-content">
+              <h2 class="text-2xl font-semibold">Let’s build your cloud roadmap</h2>
+              <p class="text-muted mt-2">
+                Reach out for cloud architecture, automation, and deployment support. Pick the channel that works best for you.
+              </p>
+              <div class="contact-actions mt-6" role="list">
+                <a class="contact-action" href="mailto:jborsiwala@gmail.com" aria-label="Email Jill Borsiwala">
+                  <span class="contact-action-title">Email</span>
+                  <span class="contact-action-value">jborsiwala@gmail.com</span>
                 </a>
                 <a
-                  class="contact-link"
-                  href="https://github.com/Indian-egotist"
+                  class="contact-action"
+                  href="https://github.com/JillBorsiwala"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Jill Borsiwala GitHub profile (opens in new tab)"
                 >
-                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 2.1a10 10 0 0 0-3.16 19.5c.5.1.69-.22.69-.49v-1.71c-2.8.61-3.39-1.18-3.39-1.18-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1.02.07 1.56 1.05 1.56 1.05.9 1.55 2.36 1.1 2.94.84.09-.66.35-1.1.63-1.36-2.24-.26-4.6-1.12-4.6-4.98 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.9-1.3 2.74-1.03 2.74-1.03.55 1.41.2 2.46.1 2.71.64.7 1.03 1.6 1.03 2.7 0 3.87-2.37 4.72-4.62 4.97.36.31.69.93.69 1.88v2.79c0 .27.18.6.7.49A10 10 0 0 0 12 2.1Z"
-                    />
-                  </svg>
-                  <span>github.com/Indian-egotist</span>
+                  <span class="contact-action-title">GitHub</span>
+                  <span class="contact-action-value">github.com/JillBorsiwala</span>
+                </a>
+                <a
+                  class="contact-action"
+                  href="https://www.linkedin.com/in/jill-borsiwala-926764288/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Jill Borsiwala LinkedIn profile (opens in new tab)"
+                >
+                  <span class="contact-action-title">LinkedIn</span>
+                  <span class="contact-action-value">linkedin.com/in/jill-borsiwala-926764288</span>
+                </a>
+                <a class="contact-action contact-action-resume" href="/images/resume.pdf" download="Jill-Borsiwala-Resume.pdf">
+                  <span class="contact-action-title">Resume</span>
+                  <span class="contact-action-value">Download PDF</span>
                 </a>
               </div>
-              <a
-                class="contact-link"
-                href="https://www.linkedin.com/in/jill-borsiwala-926764288/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Jill Borsiwala LinkedIn profile (opens in new tab)"
-              >
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M6.94 8.5a1.81 1.81 0 1 0 0-3.62 1.81 1.81 0 0 0 0 3.62Zm-1.6 2.1h3.2v8.9h-3.2v-8.9Zm5.19 0h3.07v1.22h.04c.43-.81 1.48-1.67 3.05-1.67 3.26 0 3.86 2.06 3.86 4.75v4.6h-3.2v-4.08c0-.97-.02-2.22-1.41-2.22-1.42 0-1.64 1.05-1.64 2.15v4.15h-3.2v-8.9Z"
-                  />
-                </svg>
-                <span>linkedin.com/in/jill-borsiwala-926764288</span>
-              </a>
             </div>
+            <form id="contactForm" class="contact-form" novalidate>
+              <h3 class="text-lg font-semibold">Quick message</h3>
+              <p class="text-sm text-muted">I will prefill an email draft with your message.</p>
+              <label class="contact-field" for="contactName">
+                <span>Name</span>
+                <input id="contactName" type="text" name="name" autocomplete="name" required />
+              </label>
+              <p class="field-error" data-error-for="name"></p>
+              <label class="contact-field" for="contactEmail">
+                <span>Email</span>
+                <input id="contactEmail" type="email" name="email" autocomplete="email" required />
+              </label>
+              <p class="field-error" data-error-for="email"></p>
+              <label class="contact-field" for="contactMessage">
+                <span>Message</span>
+                <textarea id="contactMessage" name="message" rows="4" required></textarea>
+              </label>
+              <p class="field-error" data-error-for="message"></p>
+              <button type="submit" class="btn btn-primary">Send message</button>
+              <p id="contactFormStatus" class="text-sm text-muted" aria-live="polite"></p>
+              <noscript>
+                <p class="text-sm text-muted">JavaScript is required for this quick-message form. You can always email me directly at jborsiwala@gmail.com.</p>
+              </noscript>
+            </form>
           </div>
-          <a class="btn btn-primary" href="mailto:jborsiwala@gmail.com">Contact me</a>
         </div>
       </section>
 
